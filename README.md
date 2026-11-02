@@ -67,9 +67,9 @@ ORDER BY region, pct_receita_regiao DESC;
    git clone https://github.com/Vitor-neia/sql-ecommerce-sales.git
    cd sql-ecommerce-sales
    ```
-2. Crie o banco e carregue os dados de `data/` .
+2. Crie o banco e carregue os dados de `data/ecommerce_sales.csv` .
 3. Execute os arquivos da pasta `sql/` .
-4. Os scripts em `scripts/` ligam com o banco de dados.
+4. Os scripts em `scripts/database_sales.db e importar.py` ligam com o banco de dados.
 5. Abra o relatório no Power BI pelo link acima.
 
 ## Estrutura do repositório
