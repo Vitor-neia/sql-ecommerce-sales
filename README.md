@@ -4,7 +4,7 @@
 
 Projeto de análise de negócios com **SQL** sobre uma base de vendas de e-commerce. As consultas calculam as métricas, e um dashboard em **Power BI** apresenta os resultados para apoiar decisões.
 
-## Dashboard
+## Dashboard 
 
 **Visão Geral / Vendas**
 ![Visão Geral](img/visao_geral.png)
