@@ -38,15 +38,14 @@ Projeto de análise de negócios com **SQL** sobre uma base de vendas de e-comme
 ## Exemplo de consulta
 
 ```sql
---Metodos de pagamento mais utilizados nas Regiões e a maior receita
-
+-- Participação de cada meio de pagamento na receita de cada região
 SELECT region,
        payment_method,
-       COUNT(payment_method) AS count_payment,
-       ROUND(SUM(revenue), 2) AS receita_total
+       ROUND(SUM(revenue), 2) AS receita_total,
+       ROUND(100.0 * SUM(revenue) / SUM(SUM(revenue)) OVER (PARTITION BY region), 2) AS pct_receita_regiao
 FROM ecommerce_sales
 GROUP BY region, payment_method
-ORDER BY count_payment DESC
+ORDER BY region, pct_receita_regiao DESC;
 ```
 
 ## Dados
